@@ -1,0 +1,20 @@
+project(TD2)
+
+FIND_PACKAGE(DGtal REQUIRED)
+INCLUDE_DIRECTORIES(${DGTAL_INCLUDE_DIRS})
+LINK_DIRECTORIES(${DGTAL_LIBRARY_DIRS})
+
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(TD2 main.cpp)
+add_executable(TD2_step2 main_step2.cpp)
+add_executable(TD2_step2_elimination main_step2_elimination.cpp)
+add_executable(TD2_step4 main_step4.cpp)
+add_executable(TD2_step4_5_6 main_step4_step5_step6.cpp)
+TARGET_LINK_LIBRARIES(TD2 ${DGTAL_LIBRARIES})
+TARGET_LINK_LIBRARIES(TD2_step2 ${DGTAL_LIBRARIES})
+TARGET_LINK_LIBRARIES(TD2_step2_elimination ${DGTAL_LIBRARIES})
+TARGET_LINK_LIBRARIES(TD2_step4 ${DGTAL_LIBRARIES})
+TARGET_LINK_LIBRARIES(TD2_step4_5_6 ${DGTAL_LIBRARIES})
